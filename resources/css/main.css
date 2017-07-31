@@ -1,0 +1,625 @@
+/*
+ *  File: main.css 
+ *  created: 20-07-2017 
+ *  Purpose: main stylesheet for fs promotion page
+ */
+
+/* =========== Notes
+ 
+ Container Maximum Width :  1620px;
+ Font size   : 16px;
+ Image path  :  /resources/images/ ;
+ Custom font : olivers barney;
+ System font : san-serif;
+
+ Notes =============  */
+
+/* ============ font configuration */
+@font-face {
+  	font-family: "OliversBarney-Regular";
+  	src: url('/resources/fonts/olivers barney.ttf');
+    src: url('/resources/fonts/olivers barney.eot?#iefix&v=4.3.0') format('embedded-opentype'),url('/resources/fonts/olivers barney.woff2?v=4.3.0') format('woff2'),url('/resources/fonts/olivers barney.woff?v=4.3.0') format('woff'),url('/resources/fonts/olivers barney.ttf?v=4.3.0') format('truetype'),url('/resources/fonts/olivers barney.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+  font-family: "AgencyFBBlack";
+  src : url('/resources/fonts/AgencyFB_Black.ttf');
+  src : url('/resources/fonts/AgencyFB_Black.ttf') format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font configuration ============= */
+
+
+body * {
+	font-family: 'OliversBarney-Regular', sans-serif;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing:    border-box;
+  	box-sizing:         border-box;
+}
+ul {
+	padding:0;
+	margin-bottom: 0;
+}
+img{
+	max-width: 100%;
+	margin:auto;
+}
+h1{
+	font-size: 4.6875em;
+}
+.slick-prev,
+	.slick-next{
+		width: auto;
+	    height: auto;
+	    font-size: 1em;
+	    top: 0;
+    	bottom: 0;
+    	width: 4.875em !important;
+	    height: 4.875em !important;
+	    margin: auto;
+	    transform: none;
+}
+.slick-next{
+	right: 0;
+}
+.slick-prev{
+	left: 0;
+}
+#wrapper .promo-btn{
+	background-color: #ffe600;
+	color: #ff0000;
+	padding: .56em 1.66em;
+	font-size: 1.875em;
+	margin:1em 0;
+	display: inline-block;
+	font-family: "AgencyFBBlack",sans-serif;
+	letter-spacing: 1px;
+	-moz-transition: .3s,filter;
+    transition: .3s,filter;
+    -webkit-transition: .3s -webkit-filter linear;
+    opacity: 1;
+    border-radius: 0;
+
+}
+#wrapper .promo-btn:hover{
+	-webkit-filter:brightness(110%) contrast(110%);filter:brightness(110%) contrast(110%);opacity:.9 
+}
+#wrapper .carousel-indicators{
+	bottom: auto;
+    top: 87%;
+}
+#wrapper .carousel-indicators li{
+	background-color: rgba(255, 255, 255,.65);
+	width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    border: none;
+    margin: 0 .45em;
+}
+#wrapper .carousel-indicators li.active{
+	background-color: #ffe700;
+}
+@media only screen and (min-width: 767px){
+	.shop-module .slick-next{
+		right: 2.6em !important;
+	}
+	.shop-module .slick-prev{
+		left: 2.6em !important;
+	}
+}
+.slick-next:before, 
+	.slick-prev:before{
+		content: "";
+		background-image: url('/resources/images/arrow_icon_sprites_62w.png') !important;
+		background-size: 200% 200%;
+		display: inline-block;
+		max-width: 60px;
+    	max-height: 60px;
+    	width: 100%;
+    	height: 100%;
+}
+.slick-prev:before{
+	background-position: 0 0;
+}
+.slick-next:before{
+	background-position : 100% 0;
+}
+.character-gallery .slick-prev:before{
+	background-position: 0 100%;
+}
+.character-gallery .slick-next:before{
+	background-position: 100% 100%;
+}
+#wrapper{
+	width: 100%;
+	max-width: 1620px; /* maximum support screen size */
+	background-color: #fff;
+	margin:auto;
+}
+#wrapper ul li {
+	list-style: none;
+}
+#wrapper a{
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+#main-content h2{
+	font-size: 4.06em;
+	font-style: normal;
+	/*line-height: 2.68em;*/
+}
+#main-content p {
+	font-family: arial;
+	font-size: 1.4375em;
+	margin:.95em 0;
+}
+@media only screen and (min-width: 320px){
+	#wrapper #main-content{
+		font-size: .5em;
+	}
+}
+@media only screen and (min-width: 480px){
+	#wrapper #main-content{
+		font-size: .6em;
+	}
+}
+@media only screen and (min-width: 767px){
+	#wrapper #main-content{
+		font-size: .5em;
+	}
+}
+@media only screen and (min-width: 1024px){
+	#wrapper #main-content{
+		font-size: .6em;
+	}
+}
+@media only screen and (min-width: 1280px){
+	#wrapper #main-content{
+		font-size: .8em;
+	}
+}
+@media only screen and (min-width: 1380px){
+	#wrapper #main-content{
+		font-size: .9em;
+	}
+}
+@media only screen and (min-width: 1600px){
+	#wrapper #main-content{
+		font-size: 1em;
+	}
+}
+.loading{
+	position:relative;
+}
+.loading:after{
+	content:"";
+	background: #fff url('/resources/images/loader-icon_b.gif') center center no-repeat;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+
+/* ==================================== module1- Promo Module Starts */
+
+
+.promo-module {
+	/*outline: 2px solid red;*/
+	color: #fff;
+}
+	.promo-module ul {
+		overflow: hidden;
+		background-color: #008ccd; 
+	}
+		.promo-module ul li {
+			/*outline: 3px solid #333;*/
+			width: 100%;
+			padding:1.9em;
+			position: relative;
+			overflow: hidden;
+		}
+		@media only screen and (min-width: 767px){
+			.promo-module ul li {
+				max-width: 33.33%;
+				float: left;
+				min-height: 31.65em;
+				background: url('/resources/images/module_pattern_bgnd.png') repeat;
+				background-size: 200% 100%;
+				background-position: 0 0;
+			}
+			.promo-module ul li:nth-child(2){
+				background-position: 100% 0;
+			}	
+		}	
+			.promo-module ul li img{
+				float: right;
+				clear: both;
+				max-width: 30%;
+			}
+			@media only screen and (min-width: 767px){
+				.promo-module ul li img{
+					max-width: 10.125em;
+					margin-right: 1em;
+				}
+			}
+			.promo-module ul li .promo-content{
+				float: left;
+				padding: 1em 0.5em 1em 0;
+				width: 70%;
+			}
+			@media only screen and (min-width: 767px){
+				.promo-module ul li .promo-content{
+					padding: 1em 3.5em 0;
+					width: auto;
+				}	
+			}
+		.promo-module ul li.promo-watch-list{
+			background-color: #1f5393;
+		}
+		.promo-module ul li.promo-crew-list{
+			background-color: #1f9fe1;	
+		}
+		.promo-module ul li.promo-parent-list {
+			background: #fdd404;
+			color: #ffe600;
+		}	
+			.promo-module ul li.promo-parent-list .promo-content{
+				background: #ee3124;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding:2.5em;
+			}
+			.promo-module ul li.promo-parent-list .promo-content h2{
+				position: relative;
+			    padding-right: .5em;
+			    display: inline-block;
+			}
+			.promo-module ul li.promo-parent-list .promo-content h2:after{
+				content:"";
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin:auto;
+				background: url('/resources/images/right_triangle_icon_27w.png') 200% 100% no-repeat;
+				background-position: 1px 100%;
+				background-size: 200% 100%;
+				width: .56em;
+				height: .96em;
+				display: inline-block;
+			}
+
+/* module1- Promo Module Ends ==================================== */
+
+
+/* ==================================== module2- Shop Module Starts */
+
+	.shop-module{
+		text-align: center;
+		background: url('/resources/images/module_transparent_color_bgnd.jpg') repeat;
+		padding:3em 3em;
+	}
+		.shop-module h1{
+			color: #ee3124;
+			/*font-size: 4.6875em;*/
+		}
+		#main-content .shop-module p{
+			color: #074f9c;
+			font-size: 1.875em;
+		}
+		.shop-module .carousel-container{
+			background: #fff;
+			overflow: hidden;
+			max-width: 91em;
+			margin:auto;
+		}
+			.shop-module ul{
+				padding:2em 4em; 
+				margin-bottom: 0;
+			}
+			@media only screen and (min-width: 767px){
+				.shop-module .carousel-container{
+					transform: skew(-20deg);
+					-webkit-transform: skew(-20deg);
+					-moz-transform: skew(-20deg);
+				}
+				.shop-module ul{
+					padding:2em 7em;
+					transform: skew(20deg);
+					-webkit-transform: skew(20deg);
+					-moz-transform: skew(20deg);
+				}
+			}
+				.shop-module ul li{
+					/*display: inline-block;*/
+					width: 33.33%;
+					vertical-align: middle;
+    				vertical-align: -webkit-baseline-middle; 
+			    	margin-left: -4px;
+			    	display: inline-block !important;
+    				float: none;
+				}
+
+
+
+/* module2- Shop Module Ends ==================================== */
+
+
+/* ==================================== module3- About Module Starts */
+.about-module{
+	background: #ee3124;
+	padding: 6.25em 4em .5em 6.25em;
+	overflow: hidden;
+	color: #fff;
+	position: relative;
+}
+.about-module h1{
+	color: #ffe600;
+}
+.about-content{
+	width: 70%;
+    float: left;
+}
+#main-content .about-content p{
+	font-size: 1.65em;
+	margin: 1.3em 0;
+}
+.about-character{
+	width: 30%;
+    float: right;
+    margin-top: -3em;
+    text-align:center;
+}
+.about-character:before{
+	content: "";
+	background: url('/resources/images/about_char_bgnd.png') no-repeat;
+	position: absolute;
+    width: 55.75em;
+    height: 26.4375em;
+    right: 0;
+    top: 0;
+    background-size: cover;
+}
+	.about-character img{
+		position: relative;
+		z-index: 1;
+		max-width: 21.625em;
+	}
+
+/* module3- About Module Ends ====================================*/
+
+
+
+/* ==================================== module4 - fs-modal module starts */
+	.fs-modal{
+
+	}
+	#wtw-modal .modal-header{
+		padding: 4.625em;
+	    background-color: #004990;
+	    color: #fff;
+	}
+		#wtw-modal .modal-header h4{
+			font-size: 5em;
+		    color: #ffe600;
+		   	line-height: 1;
+		}
+		.fs-modal .close{
+			color: #fa485b;
+	    	opacity: 1;
+	    	position: absolute;
+		    right: 1em;
+		    top: 1em;
+		    text-shadow: none;
+		}
+			.fs-modal .close span{
+				font-family: serif;
+		    	font-size: 3em;
+			}
+	@media (min-width: 768px){
+		.fs-modal .modal-dialog{
+			width: 62.75em;
+		}
+			#wtw-modal .modal-header h4{
+				max-width: 289px;
+			}
+			#wtw-modal .modal-body{
+				padding: 6em 2em;
+			}
+	}
+	.fs-modal .modal-body{
+		text-align: center;
+	}
+		.fs-modal .modal-body li{
+			display: inline-block;
+			margin: .5em 3em;
+			margin: .5em;
+	    	vertical-align: middle;
+	    	width: 47.5%;
+		}
+	.fs-modal .modal-footer{
+		border:none;
+		position: relative;
+    	padding: 1.5em 0;
+	}
+		.fs-modal .footer-border{
+			background-color: #eb362e;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    top: 0;
+		    width: 80%;
+		    margin: auto;
+		    transform: skewX(-20deg);
+		    -webkit-transform: skewX(-20deg);
+		    -moz-transform: skewX(-20deg);
+		}
+		.fs-modal .footer-border:after{
+			content: "";
+			position: absolute;
+		    width: 35px;
+		    right: -18px;
+		    background: #eb362e;
+		    top: 0;
+		    bottom: 0;
+		    transform: skewX(40deg);
+		    -webkit-transform: skewX(40deg);
+		    -moz-transform: skewX(40deg);
+		}
+		@media only screen and (min-width: 767px){
+			.fs-modal .carousel-content{
+			    margin: 0 2em;
+			}
+			.fs-modal .carousel-content .slick-prev{
+			    left: -4em;
+			}
+			.fs-modal .slick-prev:before{
+			    background-position: 0 100%;
+			}
+			.fs-modal .carousel-content .slick-next{
+			    right: -4em;
+			}.
+			.fs-modal .slick-next:before{
+			    background-position: 100% 100%;
+			}
+		}
+
+/* module4 - fs-modal module ends ==================================== */
+
+
+/* module5 - main nav module starts ==================================== */
+	
+	#main-nav{
+		min-height: 11.6em;
+		z-index: 100;
+	}
+	#main-nav .navbar-brand{
+		background: url('/resources/images/top_header_ribbon.jpg') no-repeat;
+		margin: 0;
+	}
+	#main-nav ul.nav li{
+		font-family: "AgencyFBBlack";
+		padding:0 1em; 
+	}
+	#main-nav ul.nav li+li:before{
+		content: "";
+    	width: 3px;
+	    display: inline-block;
+	    background: #ffe600;
+	    height: 100%;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    bottom: 0;
+	    margin: auto;
+	    max-height: 20px;
+	}
+		#main-nav .navbar-nav li a{
+			color:#fff;
+			font-family: inherit;
+			font-size: 1.45em;
+			font-weight: normal;
+		}
+	#main-nav .main-nav-border{
+		display: none;
+	}
+
+		@media only screen and (min-width: 767px){
+			#main-nav .container-fluid{
+				display: table;
+		    	width: 100%;
+		    	margin: 0;
+			}
+			#main-nav .navbar-brand{
+				display: table-footer-group;
+		    	height: 76px;
+			}
+			#main-nav .navbar-brand img{
+				position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+		    	z-index: 1;
+			}
+			#main-nav .navbar-collapse{
+				background-color: #330088;
+		    	display: table-header-group !important;
+			}
+			#main-nav  nav[role="navigation"]{
+				margin-top: 0;
+				padding: 1.5em 1em;
+			}
+			#main-nav .navbar-nav li a{
+				padding-top: 10px;
+			}
+		}
+
+/* ==================================== module5 - main nav module ends */
+
+
+/* module6 - cda module starts ==================================== */
+#main-content .promo-gallery{
+	
+}
+#main-content .promo-gallery:after{
+	content:"";
+	height: 1.375em;
+	display: inline-block;
+	width: 100%;
+	background-color : #ffe600;
+}
+#main-content .promo-gallery-slides{
+	vertical-align: top;
+}
+#main-content .promo-gallery .carousel-indicators{
+	display: block;
+}
+
+/* ==================================== module6 - cda module ends   */
+
+
+/* pontypandy module starts here ================================== */
+
+#main-content .site-page-container-170{
+	padding-bottom: 0;
+}
+#main-content .site-page-container-170 .top-border{
+	height: 6.4em;
+    background-size: 100% 100%;
+}
+#main-content .site-page-container-170 .container.promo-title:before{
+	background-image: url(/resources/images/gallery_header_image.png);
+    display: block;
+    width: 11.375em;
+    height: 4.25em;
+    background-size: 100% 100%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+/* ==================================== pontypandy module ends here */
+
+/*  parent activities module starts here ==================================== */
+#main-content .site-page-container .promo-title{
+	text-align: center;
+}
+#main-content .container-product-gallery{
+	background-color: #fff;
+	transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+}
+#main-content .container-product-gallery .product-gallery{
+	padding: 2em 7em;
+    transform: skew(20deg);
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+}
+/* ==================================== parent activities module ends here */

@@ -1,0 +1,126 @@
+/*
+font-family:akzidenz-grotesk
+src : Akzidenz-Grotesk Regular
+
+font-family: akzidenz-grotesk-condensed
+Akzidenz-Grotesk Condensed Bold // fontweight : bold
+Akzidenz-Grotesk Condensed Light 
+Akzidenz-Grotesk Condensed Medium // fontweight : normal
+Akzidenz-Grotesk Condensed Medium Italic // fontweight : bold
+
+*/
+
+
+
+// Declaring Variables
+@image-path: "/resources/images/";
+@containerMaxWidth: 1620px;
+@font-size:16px;
+
+// Declaring Breakpoints
+@mobile-ls:  ~"only screen and (min-width: 660px)";
+@mobile-sm:  ~"only screen and (min-width: 375px)";
+@tablet-sm:  ~"only screen and (min-width: 767px)";
+@tablet-ls:  ~"only screen and (min-width: 1024px)";
+@desktop-sm: ~"only screen and (min-width: 1280px)";
+@desktop-xl: ~"only screen and (min-width: 1340px)";
+
+// Declaring Mixins
+.rounded-corners (@radius: 10px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+.box-sizing (@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing:    @type;
+  box-sizing:         @type;
+}
+.opacity (@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+.transition (@transition) {
+  -webkit-transition: @transition;  
+  -moz-transition:    @transition;
+  -ms-transition:     @transition; 
+}
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+}
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform:    rotate(@deg);
+  -ms-transform:     rotate(@deg);
+}
+#fonts {
+  .omnes (@weight: bold) {
+    font-family: 'omnes-pro', sans-serif;
+    font-style:normal;
+    font-weight: @weight;
+  }
+  .akzidenRegular (@style : normal){
+    font-family: 'akzidenz-grotesk', sans-serif;
+    font-weight: @style;
+  }
+  .akzidenCondensed (@weight : normal , @style : normal){
+    font-family: 'akzidenz-grotesk-condensed', sans-serif;
+    font-style:@style;
+    font-weight: @weight;
+  }
+}
+.mixin (@a) when (iscolor(@a)) {
+  color: @a;
+}
+.mixin (@a) when (ispixel(@a)) {
+  width: @a;
+}
+.bg-color(@color: #fff) {
+  background-color: @color;
+}
+
+// Usage: .mar(10, 30, 15, 20);
+.mar(@mt: 0; @mr: 0; @mb: 0; @ml: 0;) { 
+  @mtv: @mt / @font-size;
+  @mrv: @mr / @font-size;
+  @mbv: @mb / @font-size;
+  @mlv: @ml / @font-size;
+  margin: ~"@{mtv}em" ~"@{mrv}em" ~"@{mbv}em" ~"@{mlv}em";
+}
+
+// Usage: .pad(5, 10, 5, 10);
+.pad(@pt: 0; @pr: 0; @pb: 0; @pl: 0;) { 
+  @ptv: @pt / @font-size;
+  @prv: @pr / @font-size;
+  @pbv: @pb / @font-size;
+  @plv: @pl / @font-size;
+  padding: ~"@{ptv}em" ~"@{prv}em" ~"@{pbv}em" ~"@{plv}em";
+}
+
+// Usage : .position-val(relative,10px,10px,10px,10px,auto)
+.position-val(@pos: relative; @top: auto; @rght : auto; @btm: auto; @left: auto; @mar : auto){
+  position: @pos;
+    top: @top;
+    bottom: @btm;
+    left:@left;
+    right:@rght;
+    margin: @mar;
+}
+
+// Usage : .keyframes(fade-in;{0% { opacity: 0; }		100% { opacity: 1; }		});
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+// Usage .animation(fade-in 0.2s linear infinite alternate)
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
